@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Llama 4 Maverick Chat Interface"
+abstract: "A modern React application for interacting with Meta's Llama 4 Maverick model via Together AI's API."
+authors:
+  - family-names: "Das"
+    given-names: "Niladri"
+    orcid: "https://orcid.org/0009-0002-6619-5691"
+    affiliation: "Synthara Company"
+version: 1.0.0
+date-released: 2023-11-01
+repository-code: "https://github.com/synthara-company/llama4Maverick"
+license: MIT
+keywords:
+  - "llama"
+  - "llm"
+  - "ai"
+  - "chat"
+  - "react"
+  - "together-ai"
+  - "maverick"
+references:
+  - type: software
+    authors:
+      - name: "Meta AI"
+    title: "Llama 4 Maverick"
+    year: 2023
+  - type: software
+    authors:
+      - name: "Together AI"
+    title: "Together AI API"
+    url: "https://www.together.ai/"
+    year: 2023
