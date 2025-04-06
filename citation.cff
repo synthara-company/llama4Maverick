@@ -7,27 +7,27 @@ authors:
     given-names: "Niladri"
     orcid: "https://orcid.org/0009-0002-6619-5691"
     affiliation: "Synthara Company"
-version: 1.0.0
-date-released: 2023-11-01
+version: "1.0.0"
+date-released: 2025-04-06
 repository-code: "https://github.com/synthara-company/llama4Maverick"
-license: MIT
+license: "MIT"
 keywords:
-  - "llama"
-  - "llm"
-  - "ai"
-  - "chat"
-  - "react"
-  - "together-ai"
-  - "maverick"
+  - llama
+  - llm
+  - ai
+  - chat
+  - react
+  - together-ai
+  - maverick
 references:
   - type: software
     authors:
       - name: "Meta AI"
     title: "Llama 4 Maverick"
-    year: 2023
+    year: 2025
   - type: software
     authors:
       - name: "Together AI"
     title: "Together AI API"
     url: "https://www.together.ai/"
-    year: 2023
+    year: 2025
