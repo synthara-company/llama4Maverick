@@ -34,7 +34,7 @@ You are Llama 4. Your knowledge cutoff date is August 2024. You speak Arabic, En
   const [showForgotPassword, setShowForgotPassword] = useState(false);
   const [passwordMatched, setPasswordMatched] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
-  const messagesEndRef = useRef(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
   const [error, setError] = useState('');
 
   // Scroll to bottom of messages
@@ -129,7 +129,7 @@ You are Llama 4. Your knowledge cutoff date is August 2024. You speak Arabic, En
         });
       } catch (err) {
         setIsLoading(false);
-        setError('Error verifying API key: ' + err.message);
+        setError('Error verifying API key: ' + (err instanceof Error ? err.message : String(err)));
       }
       return;
     }
@@ -322,7 +322,7 @@ You are Llama 4. Your knowledge cutoff date is August 2024. You speak Arabic, En
       }
     } catch (err) {
       console.error('Error calling API:', err);
-      setError(err.message || 'An error occurred while calling the API');
+      setError((err instanceof Error ? err.message : String(err)) || 'An error occurred while calling the API');
     } finally {
       setIsLoading(false);
     }
