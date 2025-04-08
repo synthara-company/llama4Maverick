@@ -331,7 +331,7 @@ You are Llama 4. Your knowledge cutoff date is August 2024. You speak Arabic, En
   const formatMessage = (content) => {
     // Simple regex to detect code blocks
     const codeBlockRegex = /```([a-zA-Z]*)\n([\s\S]*?)```/g;
-    let formattedContent = content;
+    const formattedContent = content;
     let match;
     let lastIndex = 0;
     const parts = [];

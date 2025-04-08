@@ -4,11 +4,11 @@ import React, { useState } from 'react';
 
 function Citation() {
   const [expanded, setExpanded] = useState(false);
-  
+
   return (
     <div className="w-full mt-16 mb-8 scroll-section">
       <h2 className="text-2xl font-bold text-center mb-6">Citation Information</h2>
-      
+
       <div className="bg-gray-900 rounded-lg p-6 border border-gray-800 transition-transform hover:scale-[1.01] hover:shadow-lg">
         <div className="flex items-center mb-4">
           <div className="w-10 h-10 rounded-full bg-indigo-900 flex items-center justify-center mr-3">
@@ -21,12 +21,12 @@ function Citation() {
             <p className="text-gray-400 text-sm">Version 1.0.0 · Released April 6, 2025</p>
           </div>
         </div>
-        
+
         <div className="prose prose-invert max-w-none">
           <p className="text-gray-300 mb-4">
-            A modern React application for interacting with Meta's Llama 4 Maverick model via Together AI's API.
+            A modern React application for interacting with Meta&apos;s Llama 4 Maverick model via Together AI&apos;s API.
           </p>
-          
+
           <div className="bg-gray-950 rounded-lg p-4 mb-4">
             <h4 className="text-white font-semibold mb-2">Author</h4>
             <div className="flex items-center gap-3 mb-2">
@@ -39,9 +39,9 @@ function Citation() {
               <div>
                 <p className="text-white font-medium">Niladri Das</p>
                 <div className="flex items-center gap-2 text-gray-400 text-sm">
-                  <a 
-                    href="https://orcid.org/0009-0002-6619-5691" 
-                    target="_blank" 
+                  <a
+                    href="https://orcid.org/0009-0002-6619-5691"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-green-400 hover:underline flex items-center gap-1"
                   >
@@ -56,7 +56,7 @@ function Citation() {
               </div>
             </div>
           </div>
-          
+
           {expanded && (
             <>
               <div className="bg-gray-950 rounded-lg p-4 mb-4">
@@ -67,7 +67,7 @@ function Citation() {
                   </pre>
                 </div>
               </div>
-              
+
               <div className="bg-gray-950 rounded-lg p-4 mb-4">
                 <h4 className="text-white font-semibold mb-2">Keywords</h4>
                 <div className="flex flex-wrap gap-2">
@@ -80,7 +80,7 @@ function Citation() {
                   <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm">maverick</span>
                 </div>
               </div>
-              
+
               <div className="bg-gray-950 rounded-lg p-4 mb-4">
                 <h4 className="text-white font-semibold mb-2">References</h4>
                 <ul className="list-disc list-inside text-gray-300 space-y-2">
@@ -88,10 +88,10 @@ function Citation() {
                     <span className="font-medium">Meta AI (2024).</span> Llama 4 Maverick [Software].
                   </li>
                   <li>
-                    <span className="font-medium">Together AI (2024).</span> Together AI API [Software]. 
-                    <a 
-                      href="https://www.together.ai/" 
-                      target="_blank" 
+                    <span className="font-medium">Together AI (2024).</span> Together AI API [Software].
+                    <a
+                      href="https://www.together.ai/"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-400 hover:underline ml-1"
                     >
@@ -102,10 +102,10 @@ function Citation() {
               </div>
             </>
           )}
-          
+
           <div className="mt-4 flex justify-center">
-            <button 
-              onClick={() => setExpanded(!expanded)} 
+            <button
+              onClick={() => setExpanded(!expanded)}
               className="px-4 py-2 bg-gray-800 text-gray-300 rounded hover:bg-gray-700 transition-colors flex items-center gap-2"
             >
               {expanded ? (
@@ -126,11 +126,11 @@ function Citation() {
             </button>
           </div>
         </div>
-        
+
         <div className="mt-6 flex justify-end">
-          <a 
-            href="https://github.com/synthara-company/llama4Maverick" 
-            target="_blank" 
+          <a
+            href="https://github.com/synthara-company/llama4Maverick"
+            target="_blank"
             rel="noopener noreferrer"
             className="px-3 py-1 bg-gray-800 text-gray-300 rounded hover:bg-gray-700 transition-colors flex items-center gap-1 text-sm"
           >

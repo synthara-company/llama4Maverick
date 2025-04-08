@@ -30,11 +30,11 @@ function BlogPost() {
           {expanded ? (
             <>
               <p className="text-gray-300 mb-4">
-                Using Together.ai's API with Meta's Llama-4 Maverick model, we asked:
+                Using Together.ai&apos;s API with Meta&apos;s Llama-4 Maverick model, we asked:
               </p>
 
               <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-300 mb-4">
-                "What are some fun things to do in New York?"
+                &quot;What are some fun things to do in New York?&quot;
               </blockquote>
 
               <p className="text-gray-300 mb-4">
