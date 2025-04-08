@@ -44,12 +44,15 @@ You are Llama 4. Your knowledge cutoff date is August 2024. You speak Arabic, En
 
   // Load encrypted API key from local storage
   useEffect(() => {
-    const encryptedApiKey = localStorage.getItem('encryptedApiKey');
-    const savedPassword = localStorage.getItem('apiKeyPassword');
+    // Only access localStorage in browser environment
+    if (typeof window !== 'undefined') {
+      const encryptedApiKey = localStorage.getItem('encryptedApiKey');
+      const savedPassword = localStorage.getItem('apiKeyPassword');
 
-    if (encryptedApiKey && savedPassword) {
-      // Show password input instead of API key input
-      setShowApiKeyInput(true);
+      if (encryptedApiKey && savedPassword) {
+        // Show password input instead of API key input
+        setShowApiKeyInput(true);
+      }
     }
   }, []);
 
@@ -60,13 +63,22 @@ You are Llama 4. Your knowledge cutoff date is August 2024. You speak Arabic, En
     for (let i = 0; i < key.length; i++) {
       encrypted += String.fromCharCode(key.charCodeAt(i) ^ password.charCodeAt(i % password.length));
     }
-    return btoa(encrypted); // Base64 encode
+    // Base64 encode - only in browser environment
+    if (typeof window !== 'undefined') {
+      return btoa(encrypted);
+    }
+    return encrypted;
   };
 
   // Simple decryption function
   const decryptApiKey = (encryptedKey, password) => {
     try {
-      const decoded = atob(encryptedKey); // Base64 decode
+      // Base64 decode - only in browser environment
+      if (typeof window === 'undefined') {
+        return '';
+      }
+
+      const decoded = atob(encryptedKey);
       let decrypted = '';
       for (let i = 0; i < decoded.length; i++) {
         decrypted += String.fromCharCode(decoded.charCodeAt(i) ^ password.charCodeAt(i % password.length));
@@ -107,15 +119,17 @@ You are Llama 4. Your knowledge cutoff date is August 2024. You speak Arabic, En
           }
 
           // API key is valid, proceed with reset
-          localStorage.removeItem('encryptedApiKey');
-          localStorage.removeItem('apiKeyPassword');
+          if (typeof window !== 'undefined') {
+            localStorage.removeItem('encryptedApiKey');
+            localStorage.removeItem('apiKeyPassword');
 
-          // Encrypt and save the new API key with the new password
-          const encryptedKey = encryptApiKey(apiKey, password);
-          const passwordHash = btoa(password);
+            // Encrypt and save the new API key with the new password
+            const encryptedKey = encryptApiKey(apiKey, password);
+            const passwordHash = btoa(password);
 
-          localStorage.setItem('encryptedApiKey', encryptedKey);
-          localStorage.setItem('apiKeyPassword', passwordHash);
+            localStorage.setItem('encryptedApiKey', encryptedKey);
+            localStorage.setItem('apiKeyPassword', passwordHash);
+          }
 
           setShowForgotPassword(false);
           setShowApiKeyInput(false);
@@ -150,8 +164,10 @@ You are Llama 4. Your knowledge cutoff date is August 2024. You speak Arabic, En
       const encryptedKey = encryptApiKey(apiKey, newPassword);
       const passwordHash = btoa(newPassword);
 
-      localStorage.setItem('encryptedApiKey', encryptedKey);
-      localStorage.setItem('apiKeyPassword', passwordHash);
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('encryptedApiKey', encryptedKey);
+        localStorage.setItem('apiKeyPassword', passwordHash);
+      }
 
       setShowChangePassword(false);
       setShowApiKeyInput(false);
@@ -177,7 +193,9 @@ You are Llama 4. Your knowledge cutoff date is August 2024. You speak Arabic, En
 
       // Encrypt and save the new API key
       const encryptedKey = encryptApiKey(apiKey, password);
-      localStorage.setItem('encryptedApiKey', encryptedKey);
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('encryptedApiKey', encryptedKey);
+      }
 
       setShowChangeApiKey(false);
       setShowApiKeyInput(false);
@@ -187,8 +205,12 @@ You are Llama 4. Your knowledge cutoff date is August 2024. You speak Arabic, En
     }
 
     // Check if we're trying to decrypt an existing key
-    const encryptedApiKey = localStorage.getItem('encryptedApiKey');
-    const savedPasswordHash = localStorage.getItem('apiKeyPassword');
+    let encryptedApiKey = null;
+    let savedPasswordHash = null;
+    if (typeof window !== 'undefined') {
+      encryptedApiKey = localStorage.getItem('encryptedApiKey');
+      savedPasswordHash = localStorage.getItem('apiKeyPassword');
+    }
 
     if (encryptedApiKey && savedPasswordHash && !passwordMatched) {
       // We're trying to unlock with password
@@ -198,7 +220,10 @@ You are Llama 4. Your knowledge cutoff date is August 2024. You speak Arabic, En
       }
 
       // Simple password hash (not secure for production)
-      const passwordHash = btoa(password);
+      let passwordHash = '';
+      if (typeof window !== 'undefined') {
+        passwordHash = btoa(password);
+      }
 
       if (passwordHash !== savedPasswordHash) {
         setError('Incorrect password');
@@ -230,10 +255,16 @@ You are Llama 4. Your knowledge cutoff date is August 2024. You speak Arabic, En
 
       // Encrypt and save
       const encryptedKey = encryptApiKey(apiKey, password);
-      const passwordHash = btoa(password); // Simple hash (not secure for production)
+      // Simple hash (not secure for production)
+      let passwordHash = '';
+      if (typeof window !== 'undefined') {
+        passwordHash = btoa(password);
+      }
 
-      localStorage.setItem('encryptedApiKey', encryptedKey);
-      localStorage.setItem('apiKeyPassword', passwordHash);
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('encryptedApiKey', encryptedKey);
+        localStorage.setItem('apiKeyPassword', passwordHash);
+      }
 
       setShowApiKeyInput(false);
       setSuccessMessage('API key saved successfully');
