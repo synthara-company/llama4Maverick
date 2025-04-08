@@ -7,7 +7,7 @@ import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 function ProductionCode() {
   const [showAppCode, setShowAppCode] = useState(false);
   const [showTestCode, setShowTestCode] = useState(false);
-  
+
   // App.tsx code snippet - exact code from the repository
   const appCode = `// From App.tsx - handleSubmit function
 const handleSubmit = async (e: React.FormEvent) => {
@@ -72,7 +72,7 @@ const apiKey = 'YOUR_API_KEY'; // API key placeholder for security
 async function testAPI() {
   try {
     console.log('Testing API with key:', apiKey);
-    
+
     const response = await fetch('https://api.together.ai/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -86,13 +86,13 @@ async function testAPI() {
         ]
       })
     });
-    
+
     if (!response.ok) {
       console.error('Error status:', response.status);
       console.error('Error text:', await response.text());
       return;
     }
-    
+
     const data = await response.json();
     console.log('API Response:', JSON.stringify(data, null, 2));
     console.log('Message content:', data.choices[0].message.content);
@@ -106,10 +106,10 @@ testAPI();`;
   return (
     <div className="w-full mt-16 mb-8 scroll-section">
       <h2 className="text-2xl font-bold text-center mb-6">Full Production Code</h2>
-      
+
       <div className="space-y-8">
         {/* App.tsx Code - Simplified Version */}
-        <div 
+        <div
           className="bg-gray-900 rounded-lg p-5 border border-gray-800 transition-transform hover:scale-[1.01] hover:shadow-lg cursor-pointer"
           onClick={() => setShowAppCode(!showAppCode)}
         >
@@ -136,7 +136,7 @@ testAPI();`;
               )}
             </div>
           </div>
-          
+
           {showAppCode && (
             <div className="mt-4">
               <SyntaxHighlighter
@@ -157,11 +157,11 @@ testAPI();`;
               </SyntaxHighlighter>
             </div>
           )}
-          
-          <div className="mt-4 flex justify-end">
-            <a 
-              href="https://github.com/synthara-company/llama4Maverick/blob/main/src/App.tsx" 
-              target="_blank" 
+
+          <div className="mt-4 flex justify-center sm:justify-end">
+            <a
+              href="https://github.com/synthara-company/llama4Maverick/blob/main/src/App.tsx"
+              target="_blank"
               rel="noopener noreferrer"
               className="px-3 py-1 bg-gray-800 text-gray-300 rounded hover:bg-gray-700 transition-colors flex items-center gap-1 text-sm"
               onClick={(e) => e.stopPropagation()}
@@ -173,9 +173,9 @@ testAPI();`;
             </a>
           </div>
         </div>
-        
+
         {/* test-api-fetch.js Code */}
-        <div 
+        <div
           className="bg-gray-900 rounded-lg p-5 border border-gray-800 transition-transform hover:scale-[1.01] hover:shadow-lg cursor-pointer"
           onClick={() => setShowTestCode(!showTestCode)}
         >
@@ -204,7 +204,7 @@ testAPI();`;
               )}
             </div>
           </div>
-          
+
           {showTestCode && (
             <div className="mt-4">
               <SyntaxHighlighter
@@ -225,11 +225,11 @@ testAPI();`;
               </SyntaxHighlighter>
             </div>
           )}
-          
-          <div className="mt-4 flex justify-end">
-            <a 
-              href="https://github.com/synthara-company/llama4Maverick/blob/main/test-api-fetch.js" 
-              target="_blank" 
+
+          <div className="mt-4 flex justify-center sm:justify-end">
+            <a
+              href="https://github.com/synthara-company/llama4Maverick/blob/main/test-api-fetch.js"
+              target="_blank"
               rel="noopener noreferrer"
               className="px-3 py-1 bg-gray-800 text-gray-300 rounded hover:bg-gray-700 transition-colors flex items-center gap-1 text-sm"
               onClick={(e) => e.stopPropagation()}
@@ -242,11 +242,11 @@ testAPI();`;
           </div>
         </div>
       </div>
-      
-      <div className="mt-6 text-gray-400 text-center">
-        <p className="mb-2">These code examples demonstrate how to interact with the Llama 4 Maverick model using the Together AI API.</p>
-        <p className="mb-2">The App.tsx file shows a complete React application with user interface, while the test-api-fetch.js file provides a simple script for testing the API.</p>
-        <p>Both examples use the fetch API to make requests to the Together AI endpoint and process the responses.</p>
+
+      <div className="mt-6 text-gray-400 text-center px-2 sm:px-0">
+        <p className="mb-2 text-sm sm:text-base">These code examples demonstrate how to interact with the Llama 4 Maverick model using the Together AI API.</p>
+        <p className="mb-2 text-sm sm:text-base">The App.tsx file shows a complete React application with user interface, while the test-api-fetch.js file provides a simple script for testing the API.</p>
+        <p className="text-sm sm:text-base">Both examples use the fetch API to make requests to the Together AI endpoint and process the responses.</p>
       </div>
     </div>
   );

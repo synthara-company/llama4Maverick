@@ -23,21 +23,21 @@ function BlogPost() {
         </div>
 
         <div className="prose prose-invert max-w-none">
-          <p className="text-gray-300 mb-4">
+          <p className="text-gray-300 mb-4 text-sm sm:text-base px-2 sm:px-0">
             Testing how an AI model responds to natural language queries requires a valid API key, correct endpoint, and properly formatted payload.
           </p>
 
           {expanded ? (
             <>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-300 mb-4 text-sm sm:text-base">
                 Using Together.ai&apos;s API with Meta&apos;s Llama-4 Maverick model, we asked:
               </p>
 
-              <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-300 mb-4">
+              <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-300 mb-4 text-sm sm:text-base break-words">
                 &quot;What are some fun things to do in New York?&quot;
               </blockquote>
 
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-300 mb-4 text-sm sm:text-base">
                 The model provided a concise guide to New York attractions, demonstrating the capabilities of modern conversational AI.
               </p>
 
@@ -75,7 +75,7 @@ function BlogPost() {
           </div>
         </div>
 
-        <div className="mt-6 flex justify-end">
+        <div className="mt-6 flex justify-center sm:justify-end">
           <a
             href="https://medium.com/@bniladridas/a-patterned-perspective-what-happens-when-you-ask-a-model-about-new-york-6a39d538bb32"
             target="_blank"
@@ -86,7 +86,7 @@ function BlogPost() {
               <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
               <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
             </svg>
-            Read Full Article on Medium
+            Read on Medium
           </a>
         </div>
       </div>

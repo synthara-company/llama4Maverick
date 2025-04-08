@@ -62,8 +62,8 @@ function Citation() {
               <div className="bg-gray-950 rounded-lg p-4 mb-4">
                 <h4 className="text-white font-semibold mb-2">How to Cite</h4>
                 <div className="text-gray-300 font-mono text-sm">
-                  <pre className="whitespace-pre-wrap">
-{`Das, N. (2024). Llama 4 Maverick Chat Interface (Version 1.0.0) [Computer software]. https://github.com/synthara-company/llama4Maverick`}
+                  <pre className="whitespace-pre-wrap break-words overflow-x-auto text-xs sm:text-sm">
+{`Das, N. (2025). Llama 4 Maverick Chat Interface (Version 1.0.0) [Computer software]. https://github.com/synthara-company/llama4Maverick`}
                   </pre>
                 </div>
               </div>
@@ -85,10 +85,10 @@ function Citation() {
                 <h4 className="text-white font-semibold mb-2">References</h4>
                 <ul className="list-disc list-inside text-gray-300 space-y-2">
                   <li>
-                    <span className="font-medium">Meta AI (2024).</span> Llama 4 Maverick [Software].
+                    <span className="font-medium">Meta AI (2025).</span> Llama 4 Maverick [Software].
                   </li>
                   <li>
-                    <span className="font-medium">Together AI (2024).</span> Together AI API [Software].
+                    <span className="font-medium">Together AI (2025).</span> Together AI API [Software].
                     <a
                       href="https://www.together.ai/"
                       target="_blank"
@@ -127,7 +127,7 @@ function Citation() {
           </div>
         </div>
 
-        <div className="mt-6 flex justify-end">
+        <div className="mt-6 flex justify-center sm:justify-end">
           <a
             href="https://github.com/synthara-company/llama4Maverick"
             target="_blank"

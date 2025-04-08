@@ -46,6 +46,27 @@ export default function ChatComponent() {
     }
   }, []);
 
+  // Auto-hide success and error messages after 3 seconds
+  useEffect(() => {
+    if (successMessage) {
+      const timer = setTimeout(() => {
+        setSuccessMessage('');
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [successMessage]);
+
+  useEffect(() => {
+    if (error) {
+      const timer = setTimeout(() => {
+        setError('');
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [error]);
+
   // Simple encryption function (not secure for production)
   const encryptApiKey = (key, password) => {
     // This is a very basic XOR encryption - not secure for production
@@ -673,14 +694,14 @@ export default function ChatComponent() {
 
         {/* Success Message */}
         {successMessage && (
-          <div className="w-full bg-green-900 bg-opacity-50 rounded-lg p-3 mb-4 text-white text-sm">
+          <div className="w-full bg-green-900 bg-opacity-50 rounded-lg p-3 mb-4 text-white text-sm animate-fadeIn">
             {successMessage}
           </div>
         )}
 
         {/* Error Message */}
         {error && (
-          <div className="w-full bg-red-900/30 rounded-lg p-3 mb-4 text-white text-sm">
+          <div className="w-full bg-red-900/30 rounded-lg p-3 mb-4 text-white text-sm animate-fadeIn">
             {error}
           </div>
         )}
