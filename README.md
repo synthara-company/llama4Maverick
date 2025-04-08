@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# UI/UX Preferences
+- User prefers simpler UI elements, specifically a simpler 'Back to Home' link.
+- User prefers to minimize redundant UI elements, specifically limiting 'GitHub repository' links to only where necessary to reduce visual noise.
+- User prefers to minimize redundant UI elements, specifically limiting 'Code Examples' text to reduce visual noise.
+- User prefers minimizing text content in web applications to reduce visual noise.
+- User wants mobile-responsive navigation in web applications.
+- User prefers tech stack visualizations to be shown as import type diagrams.
+- User prefers modal previews that open when clicked rather than static displays.
+- User prefers consistent UX design between different parts of their applications.
+- User prefers UI elements that resist fast scrolling for better user experience.
+- User prefers to use the synthara_ai logo image instead of the llama image.
+- User prefers fonts that create minimal visual noise in web applications.
+- User prefers minimalist UI with no redundant buttons or visual noise, specifically wanting to remove action buttons that create visual clutter.
+- User prefers keyboard shortcuts: Control key for chat, Option key for code examples, and Command key for GitHub repository.
+- User prefers the chat interface to be named 'chat to assistant' rather than 'Llama 4 Chat'.
+- User prefers names that don't carry any noise in their words.
+- User prefers consistent button colors in interfaces, specifically that save buttons should match send buttons.
+- User prefers to have password protection for saving and changing API keys.
+- User prefers password validation feedback (wrong/matched), option to change API keys with password reuse or reset, and a forgot password feature.
+- User prefers that during password reset, the system should validate the API key and show an error if it doesn't match before allowing password changes.
+- User prefers the Git button to be labeled as 'Git' but display a backslash symbol.
+- User prefers to use the Synthara logo SVG instead of the text 'Synthara Company' for branding.
+- User prefers to use the GitHub avatar at https://avatars.githubusercontent.com/u/203538727?s=200&v=4 as the favicon.
+- User prefers to use the logo instead of text or other visual elements.
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Projects & Repositories
+- The llama4Maverick repository is Synthara's heavyweight LLM project.
+- The llama4Maverick repository is owned by Synthara Company with Niladri Das as the author, and should be cited when used.
+- User wants to incorporate information from Meta's Llama 4 blog post into projects.
+- The GitHub repository for Synthara AI company is at https://github.com/synthara-company.
+- User wants all code-example functionality and related assets (diagrams, llama images) to be kept exclusively in the synthara-next directory.
+- User wants to use a specific conversational prompt template for testing the Llama 4 model in production.

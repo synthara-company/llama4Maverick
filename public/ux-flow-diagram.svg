@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#111" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" fill="#fff" text-anchor="middle" font-weight="bold">Llama4Maverick User Experience Flow</text>
+  
+  <!-- User Input Section -->
+  <rect x="50" y="80" width="200" height="120" rx="8" ry="8" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <text x="150" y="110" font-family="Arial, sans-serif" font-size="18" fill="#fff" text-anchor="middle" font-weight="bold">User Input</text>
+  <rect x="70" y="125" width="160" height="60" rx="4" ry="4" fill="#1a202c" stroke="#4a5568" stroke-width="1"/>
+  <text x="150" y="155" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Text prompt entry</text>
+  <text x="150" y="175" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Submit button</text>
+  
+  <!-- API Request Section -->
+  <rect x="300" y="80" width="200" height="120" rx="8" ry="8" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <text x="400" y="110" font-family="Arial, sans-serif" font-size="18" fill="#fff" text-anchor="middle" font-weight="bold">API Request</text>
+  <rect x="320" y="125" width="160" height="60" rx="4" ry="4" fill="#1a202c" stroke="#4a5568" stroke-width="1"/>
+  <text x="400" y="145" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Fetch API call</text>
+  <text x="400" y="165" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Together AI endpoint</text>
+  <text x="400" y="185" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Loading indicator</text>
+  
+  <!-- Model Processing Section -->
+  <rect x="550" y="80" width="200" height="120" rx="8" ry="8" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <text x="650" y="110" font-family="Arial, sans-serif" font-size="18" fill="#fff" text-anchor="middle" font-weight="bold">Model Processing</text>
+  <rect x="570" y="125" width="160" height="60" rx="4" ry="4" fill="#1a202c" stroke="#4a5568" stroke-width="1"/>
+  <text x="650" y="145" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Llama 4 Maverick</text>
+  <text x="650" y="165" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">17B parameters</text>
+  <text x="650" y="185" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">128 experts</text>
+  
+  <!-- Response Display Section -->
+  <rect x="550" y="250" width="200" height="120" rx="8" ry="8" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <text x="650" y="280" font-family="Arial, sans-serif" font-size="18" fill="#fff" text-anchor="middle" font-weight="bold">Response</text>
+  <rect x="570" y="295" width="160" height="60" rx="4" ry="4" fill="#1a202c" stroke="#4a5568" stroke-width="1"/>
+  <text x="650" y="315" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Generated text</text>
+  <text x="650" y="335" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Markdown formatting</text>
+  <text x="650" y="355" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Copy button</text>
+  
+  <!-- UI Feedback Section -->
+  <rect x="300" y="250" width="200" height="120" rx="8" ry="8" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="18" fill="#fff" text-anchor="middle" font-weight="bold">UI Feedback</text>
+  <rect x="320" y="295" width="160" height="60" rx="4" ry="4" fill="#1a202c" stroke="#4a5568" stroke-width="1"/>
+  <text x="400" y="315" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Response rendering</text>
+  <text x="400" y="335" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Error handling</text>
+  <text x="400" y="355" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Success indicators</text>
+  
+  <!-- User Interaction Section -->
+  <rect x="50" y="250" width="200" height="120" rx="8" ry="8" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <text x="150" y="280" font-family="Arial, sans-serif" font-size="18" fill="#fff" text-anchor="middle" font-weight="bold">User Interaction</text>
+  <rect x="70" y="295" width="160" height="60" rx="4" ry="4" fill="#1a202c" stroke="#4a5568" stroke-width="1"/>
+  <text x="150" y="315" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">View response</text>
+  <text x="150" y="335" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Submit new prompt</text>
+  <text x="150" y="355" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Copy results</text>
+  
+  <!-- Flow Arrows -->
+  <!-- User Input to API Request -->
+  <line x1="250" y1="140" x2="300" y2="140" stroke="#4299e1" stroke-width="2"/>
+  <polygon points="290,135 300,140 290,145" fill="#4299e1"/>
+  
+  <!-- API Request to Model Processing -->
+  <line x1="500" y1="140" x2="550" y2="140" stroke="#4299e1" stroke-width="2"/>
+  <polygon points="540,135 550,140 540,145" fill="#4299e1"/>
+  
+  <!-- Model Processing to Response -->
+  <line x1="650" y1="200" x2="650" y2="250" stroke="#4299e1" stroke-width="2"/>
+  <polygon points="645,240 650,250 655,240" fill="#4299e1"/>
+  
+  <!-- Response to UI Feedback -->
+  <line x1="550" y1="310" x2="500" y2="310" stroke="#4299e1" stroke-width="2"/>
+  <polygon points="510,305 500,310 510,315" fill="#4299e1"/>
+  
+  <!-- UI Feedback to User Interaction -->
+  <line x1="300" y1="310" x2="250" y2="310" stroke="#4299e1" stroke-width="2"/>
+  <polygon points="260,305 250,310 260,315" fill="#4299e1"/>
+  
+  <!-- User Interaction to User Input (loop) -->
+  <path d="M 150,250 Q 150,230 130,230 H 70 Q 50,230 50,210 V 180 Q 50,160 70,160 H 130 Q 150,160 150,140" stroke="#4299e1" stroke-width="2" fill="none"/>
+  <polygon points="145,150 150,140 155,150" fill="#4299e1"/>
+  
+  <!-- Footer -->
+  <text x="400" y="420" font-family="Arial, sans-serif" font-size="16" fill="#fff" text-anchor="middle">User Experience Flow for Llama4Maverick Application</text>
+  <text x="400" y="445" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">A seamless interface for interacting with Meta's Llama 4 Maverick model</text>
+  <text x="400" y="470" font-family="Arial, sans-serif" font-size="14" fill="#9ae6b4" text-anchor="middle">Synthara's Heavyweight LLM Project</text>
+</svg>
