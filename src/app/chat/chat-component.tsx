@@ -334,7 +334,7 @@ export default function ChatComponent() {
   const formatMessage = (content) => {
     // Simple regex to detect code blocks
     const codeBlockRegex = /```([a-zA-Z]*)\n([\s\S]*?)```/g;
-    const formattedContent = content;
+    // No need to create a separate variable for content
     let match;
     let lastIndex = 0;
     const parts = [];
